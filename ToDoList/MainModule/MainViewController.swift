@@ -182,6 +182,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return UIMenu(title: "", children: [edit, share, delete])
         })
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
 }
 
 extension MainViewController: MainTableViewCellDellegate {
